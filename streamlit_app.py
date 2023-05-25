@@ -17,6 +17,12 @@ def uploadingIMG():
     with col2:
             st.markdown('<p style="text-align: center;">After</p>',unsafe_allow_html=True)
 
-uploadingIMG()
+uploaded_file = st.file_uploader("From here you can upload files from your computer:",type='jpg')
+camera_picture = st.camera_input("You can tkae photos using your computers camera")
+uploadingIMG(uploaded_file)
+uploadingIMG(camera_picture)
 
-st.camera_input("You can tkae photos using your computers camera")
+
+
+
+
